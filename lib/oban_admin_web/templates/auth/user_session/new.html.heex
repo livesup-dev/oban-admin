@@ -1,0 +1,5 @@
+<.sign_in
+  title="Welcome to Oban Admin"
+  oauth_path={Routes.o_auth_path(ObanAdminWeb.Endpoint, :request, "okta")}
+  error={get_flash(@conn, :error)}
+/>
