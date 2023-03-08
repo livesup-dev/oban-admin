@@ -33,6 +33,7 @@ defmodule ObanAdminWeb.Router do
     pipe_through([:browser, :logged_in_layout, :require_authenticated_user])
 
     live("/", Live.HomeLive, :index)
+    live("/jobs", Live.JobLive, :index)
   end
 
   scope "/oauth", ObanAdminWeb do

@@ -5,7 +5,7 @@ config :oban_admin, ObanAdmin.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "oban_admin_dev",
+  database: "sup_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
