@@ -1,0 +1,22 @@
+<.live_component module={Palette.Components.Sidebar} id="sidebar">
+  <.sidebar_main
+    logo="/images/logo.png"
+    logout_path={Routes.user_session_path(@socket, :delete)}
+    user={@current_user}
+  >
+  </.sidebar_main>
+
+  <.sidebar_panel>
+    <.sidebar_panel :if={@section == :home} title="Home">
+      <.sidebar_item label="Dashboard" path="/" />
+    </.sidebar_panel>
+  </.sidebar_panel>
+</.live_component>
+
+<.app_header_wrapper>
+  <.app_header />
+</.app_header_wrapper>
+
+<.main_content_wrapper>
+  <%= @inner_content %>
+</.main_content_wrapper>

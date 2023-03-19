@@ -1,0 +1,36 @@
+<.breadcrumb title="Jobs" steps={@steps} />
+
+<.badge description={format_date(@last_updated_at)} color={:info} class="w-32" />
+<.table rows={@jobs}>
+  <:col :let={job} label="ID">
+    <%= job.id %>
+  </:col>
+  <:col :let={job} label="Worker">
+    <p class="font-medium"><%= job.worker %></p>
+    <p class="mt-0.5 text-xs"><%= inspect(job.args) %></p>
+  </:col>
+  <:col :let={job} label="State">
+    <.badge description={job.state} color={state_color(job.state)} />
+  </:col>
+  <:col :let={job} label="Queue">
+    <%= job.queue %>
+  </:col>
+  <:col :let={job} label="Inserted At">
+    <.from_now value={job.inserted_at} />
+  </:col>
+  <:col :let={job} label="Scheduled At">
+    <.from_now value={job.scheduled_at} />
+  </:col>
+  <:col :let={job} label="Attempted At">
+    <.from_now value={job.attempted_at} />
+  </:col>
+  <:col :let={job} label="Completed At">
+    <.from_now value={job.completed_at} />
+  </:col>
+  <:col :let={job} label="Attempts">
+    <%= "#{job.attempt}/#{job.max_attempts}" %>
+  </:col>
+  <:col :let={job} label="Errors">
+    <%= inspect(job.errors) %>
+  </:col>
+</.table>
