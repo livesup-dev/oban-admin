@@ -82,6 +82,7 @@ defmodule ObanAdmin.MixProject do
       # Translations
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
+      {:swoosh, "~> 1.9"},
 
       # OAuth
       {:oauth2, "~> 2.0"},
