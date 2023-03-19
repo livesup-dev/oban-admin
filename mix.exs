@@ -9,6 +9,7 @@ defmodule ObanAdmin.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
+      test_coverage: [tool: ExCoveralls],
       aliases: aliases(),
       deps: deps(),
       releases: [
