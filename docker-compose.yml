@@ -11,7 +11,7 @@ services:
       PGDATABASE: livesup
       PGPORT: 5432
       PGHOST: db
-      IDENTITY_GATE_HOSTNAME: localhost
+      OBAN_ADMIN_HOSTNAME: localhost
       MIX_ENV: prod
     env_file:
       - .env
